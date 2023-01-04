@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ConversorKotlin</string>
+
+    <string-array name="OpcionesConversor">
+        <item>Millas a Kilómetros</item>
+        <item>Litros a Galones</item>
+        <item>Kilogramos a Libras</item>
+        <item>Dólares a Euros</item>
+    </string-array>
+
+</resources>
