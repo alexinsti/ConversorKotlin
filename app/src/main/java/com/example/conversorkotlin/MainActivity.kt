@@ -42,7 +42,6 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
                         } else {
                             valor2.setText(null)
                         }
-                        println("numero" + valor1.text.toString())
                     }
                 }
 
@@ -54,7 +53,6 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
                         } else {
                             valor2.setText(null)
                         }
-                        println("numero" + valor1.text.toString())
                     }
                 }
 
@@ -66,7 +64,6 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
                         } else {
                             valor2.setText(null)
                         }
-                        println("numero" + valor1.text.toString())
                     }
                 }
 
@@ -78,7 +75,17 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
                         } else {
                             valor2.setText(null)
                         }
-                        println("numero" + valor1.text.toString())
+                    }
+                }
+
+                "Metros a Pies"-> {
+                    if (valor1.hasFocus()) {
+                        if (valor1.text.toString().length != 0) {
+                            println(valor1.text.toString().length)
+                            valor2.setText(metrosAPies(valor1.text.toString()))
+                        } else {
+                            valor2.setText(null)
+                        }
                     }
                 }
             }
@@ -124,6 +131,17 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
                         if (valor2.text.toString().length != 0) {
                             println(valor2.text.toString().length)
                             valor1.setText(eurosADolares(valor2.text.toString()))
+                        } else {
+                            valor1.setText(null)
+                        }
+                    }
+                }
+
+                "Metros a Pies"-> {
+                    if (valor2.hasFocus()) {
+                        if (valor2.text.toString().length != 0) {
+                            println(valor2.text.toString().length)
+                            valor1.setText(piesAMetros(valor2.text.toString()))
                         } else {
                             valor1.setText(null)
                         }
@@ -236,6 +254,11 @@ Metros a Pies
             3 -> {
                 unidad1.setText("Dólares")
                 unidad2.setText("Euros")
+            }
+
+            4 -> {
+                unidad1.setText("Metros")
+                unidad2.setText("Pies")
             }
         }
     }
